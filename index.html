@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>فرقة الفهد الأسود 707</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <style>
         .section {
             display: none;
@@ -25,6 +24,24 @@
         }
         nav a.active {
             border-color: #f00;
+        }
+        /* إشعار الإرسال */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #4CAF50; /* لون الأخضر */
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: opacity 0.5s ease-in-out;
+            opacity: 1;
+        }
+        .notification.hidden {
+            opacity: 0;
+            visibility: hidden;
         }
     </style>
 </head>
@@ -121,6 +138,9 @@
             </form>
         </section>
     </main>
+    <div id="notification" class="notification hidden">
+        <p>تم إرسال طلبك بنجاح! سنقوم بمراجعة طلبك والرد عليك قريبًا.</p>
+    </div>
 
     <footer>
         <p>&copy; 2024 فرقة الفهد الأسود 707. جميع الحقوق محفوظة. معًا نحو عدالة أكثر أمانًا.</p>
