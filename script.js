@@ -19,11 +19,13 @@ links.forEach(link => {
     });
 });
 
-emailjs.init('yURl2NI4q_au1DHvE'); // استبدل YOUR_USER_ID بمعرف المستخدم الخاص بك من EmailJS
+emailjs.init('yURl2NI4q_au1DHvE'); // استبدل YOUR_USER_ID بالقيمة الصحيحة
 
 const form = document.querySelector('#apply form');
+const notification = document.getElementById('notification');
+
 form.addEventListener('submit', function (e) {
-    e.preventDefault();
+    e.preventDefault(); // منع إعادة تحميل الصفحة
 
     const data = {
         to_name: '707 Squad',
@@ -38,8 +40,16 @@ form.addEventListener('submit', function (e) {
 
     emailjs.send('blackpanther707squad', '707squad', data)
         .then(() => {
-            alert('تم إرسال الطلب بنجاح!');
-            form.reset(); // إعادة تعيين الحقول
+            // عرض الإشعار
+            notification.classList.remove('hidden');
+
+            // إخفاء الإشعار بعد 5 ثوانٍ
+            setTimeout(() => {
+                notification.classList.add('hidden');
+            }, 5000);
+
+            // إعادة تعيين الحقول
+            form.reset();
         })
         .catch(err => {
             console.error('حدث خطأ أثناء الإرسال:', err);
