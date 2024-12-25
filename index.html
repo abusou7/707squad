@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرقة الفهد الأسود 707</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .section { display: none; }
+        .section.active { display: block; }
+        nav a { cursor: pointer; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>فرقة الفهد الأسود 707</h1>
+        <nav>
+            <a data-target="home">الرئيسية</a>
+            <a data-target="about">من نحن</a>
+            <a data-target="missions">المهام</a>
+            <a data-target="gallery">المعرض</a>
+            <a data-target="contact">تواصل معنا</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- الصفحة الرئيسية -->
+        <section id="home" class="section active">
+            <h2>العدالة بحزم واحترافية</h2>
+            <p>تخصصنا هو تنفيذ قرارات المحكمة العليا ورئيس الشرطة بكل دقة.</p>
+        </section>
+
+        <!-- من نحن -->
+        <section id="about" class="section">
+            <h2>من نحن</h2>
+            <p>فرقة الفهد الأسود 707 هي فرقة النخبة المسؤولة عن تنفيذ القرارات الحساسة وتأمين الشخصيات البارزة.</p>
+        </section>
+
+        <!-- المهام -->
+        <section id="missions" class="section">
+            <h2>مهامنا</h2>
+            <ul>
+                <li>تنفيذ أوامر الاعتقال.</li>
+                <li>مداهمة أوكار العصابات.</li>
+                <li>تأمين الشخصيات المهمة والفعاليات الحساسة.</li>
+            </ul>
+        </section>
+
+        <!-- المعرض -->
+        <section id="gallery" class="section">
+            <h2>المعرض</h2>
+            <p>صور وفيديوهات لأبرز المهام والتدريبات.</p>
+        </section>
+
+        <!-- تواصل معنا -->
+        <section id="contact" class="section">
+            <h2>تواصل معنا</h2>
+            <form>
+                <div>
+                    <label for="name">الاسم:</label><br>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">البريد الإلكتروني:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">الرسالة:</label><br>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">إرسال</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 فرقة الفهد الأسود 707. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
